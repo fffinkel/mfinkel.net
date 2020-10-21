@@ -12,13 +12,13 @@ command -v screen >/dev/null 2>&1 || { echo "ERROR: screen is not installed" >&2
 command -v vim >/dev/null 2>&1 || { echo "ERROR: vim is not installed" >&2; exit 1; }
 
 mkdir $HOME/cnf
-git clone git@github.com:fffinkel/zsh.git $HOME/cnf/zsh
+git clone https://github.com/fffinkel/zsh.git $HOME/cnf/zsh
 make -C $HOME/cnf/zsh install
 
-git clone git@github.com:fffinkel/vim.git $HOME/cnf/vim
+git clone https://github.com/fffinkel/vim.git $HOME/cnf/vim
 make -C $HOME/cnf/vim install
 
-git clone git@github.com:fffinkel/dotfiles.git $HOME/cnf/dotfiles
+git clone https://github.com/fffinkel/dotfiles.git $HOME/cnf/dotfiles
 make -C $HOME/cnf/dotfiles install
 
 echo "[user]" > ~/.gitconfig
